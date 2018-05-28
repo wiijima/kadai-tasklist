@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'session#destroy'
 
   get 'signup', to: 'users#new'
-  resources :users, only: [:index, :show, :new, :create]
+  resources :users, only: [:index, :new, :create]
 
   resources :tasks, only: [:show, :create, :edit, :update, :destroy]
 end
